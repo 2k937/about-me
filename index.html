@@ -5,145 +5,183 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ace – Discord Bot & Web Developer</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-  <!-- AOS Animation Library -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <style>
+    :root {
+      --primary: #4cc9f0;
+      --secondary: #f72585;
+      --dark: #121212;
+      --card: #1e1e1e;
+    }
+
     body {
       font-family: 'Poppins', sans-serif;
       margin: 0;
-      padding: 0;
-      background-color: #121212;
+      background: var(--dark);
       color: #fff;
-      line-height: 1.6;
+      line-height: 1.7;
       scroll-behavior: smooth;
     }
 
     header {
-      background: linear-gradient(135deg, #4cc9f0, #f72585);
-      padding: 80px 20px;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      padding: 120px 20px;
       text-align: center;
       color: #fff;
+      border-bottom-left-radius: 60px;
+      border-bottom-right-radius: 60px;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.5);
     }
     header h1 {
       margin: 0;
-      font-size: 3em;
-      animation: fadeInDown 1s ease;
+      font-size: 3.5em;
+      font-weight: 600;
+      letter-spacing: 2px;
     }
     header p {
-      font-size: 1.2em;
-      margin-top: 10px;
-      animation: fadeInUp 1.5s ease;
+      font-size: 1.3em;
+      margin-top: 15px;
+      opacity: 0.9;
     }
-    header p a {
+    header a {
       color: #fff;
-      text-decoration: underline;
-      font-weight: bold;
+      font-weight: 600;
+      text-decoration: none;
+      border-bottom: 2px solid #fff;
+      transition: color 0.3s ease;
+    }
+    header a:hover {
+      color: #000;
     }
 
     section {
-      padding: 60px 20px;
-      max-width: 1000px;
+      padding: 80px 20px;
+      max-width: 1100px;
       margin: auto;
     }
     h2 {
-      color: #4cc9f0;
-      margin-bottom: 20px;
+      color: var(--primary);
+      margin-bottom: 25px;
       text-align: center;
-      font-size: 2em;
+      font-size: 2.4em;
+      font-weight: 600;
     }
 
-    .project {
-      background-color: #1e1e1e;
-      padding: 25px;
-      border-radius: 12px;
-      margin-top: 20px;
-      box-shadow: 0px 4px 15px rgba(0,0,0,0.4);
+    .card {
+      background-color: var(--card);
+      padding: 30px;
+      border-radius: 15px;
+      margin: 25px auto;
+      box-shadow: 0px 5px 20px rgba(0,0,0,0.5);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
-    .project:hover {
-      transform: translateY(-10px);
-      box-shadow: 0px 8px 25px rgba(0,0,0,0.6);
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0px 10px 30px rgba(0,0,0,0.7);
     }
-    .project h3 {
+    .card h3 {
       margin-top: 0;
-      color: #f72585;
+      color: var(--secondary);
+      font-size: 1.6em;
     }
 
     footer {
-      background-color: #1e1e1e;
+      background: var(--card);
       text-align: center;
-      padding: 20px;
-      margin-top: 60px;
+      padding: 25px;
+      font-size: 0.95em;
+      color: #aaa;
     }
     footer a {
-      color: #4cc9f0;
+      color: var(--primary);
       text-decoration: none;
-      font-weight: bold;
+      font-weight: 600;
+    }
+    footer a:hover {
+      text-decoration: underline;
     }
 
-    /* Animations */
-    @keyframes fadeInDown {
-      from { opacity: 0; transform: translateY(-30px); }
-      to { opacity: 1; transform: translateY(0); }
+    /* Contact section */
+    .contact {
+      text-align: center;
     }
-    @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(30px); }
-      to { opacity: 1; transform: translateY(0); }
+    .contact a {
+      display: inline-block;
+      margin: 10px;
+      padding: 12px 20px;
+      border-radius: 8px;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: #fff;
+      font-weight: 600;
+      text-decoration: none;
+      transition: transform 0.3s ease;
+    }
+    .contact a:hover {
+      transform: scale(1.05);
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Ace – Discord Bot & Web Developer</h1>
-    <p>Crafting Bots & Building Web Experiences<br>
-    <a href="https://github.com/2k937" target="_blank">Visit my GitHub</a></p>
+  <header data-aos="fade-down">
+    <h1>Ace</h1>
+    <p>Discord Bot & Web Developer<br>
+      <a href="https://github.com/2k937" target="_blank">Check My GitHub</a>
+    </p>
   </header>
 
   <section data-aos="fade-up">
     <h2>About Me</h2>
-    <p>Hello! I'm Ace, a developer who builds <strong>Discord bots</strong> and <strong>websites</strong>. 
-    I enjoy creating useful tools and fun projects — some are <strong>free</strong>, and some are <strong>paid</strong>.</p>
+    <div class="card">
+      <p>Hi, I'm <strong>Ace</strong>! I create <strong>Discord bots</strong> and <strong>websites</strong>.  
+      My goal is to build fun and useful projects for communities.  
+      Some of my projects are <strong>free</strong>, and some are <strong>paid</strong> for advanced needs.</p>
+    </div>
   </section>
 
   <section data-aos="fade-right">
     <h2>Community Experience</h2>
-    <p>Beyond development, I have strong experience in <strong>community management</strong>.  
-    I’ve helped <strong>moderate and manage Discord servers with over 5,000 members</strong>, taking on roles in <strong>management, ownership, and moderation</strong>.  
-    This background gives me valuable insight into what communities need from both bots and staff.</p>
+    <div class="card">
+      <p>I have extensive <strong>community management experience</strong>, having moderated and managed servers with over <strong>5,000 members</strong>.  
+      From ownership to moderation, this has given me a deep understanding of what communities need from both bots and staff teams.</p>
+    </div>
   </section>
 
   <section data-aos="fade-left">
     <h2>Services</h2>
-    <p>I provide Discord bot development, website building, and project support.  
-    Most of my work is <strong>free</strong>, but I also take on <strong>paid</strong> projects for custom or advanced needs.</p>
+    <div class="card">
+      <p>I offer <strong>Discord bot development</strong>, <strong>web design</strong>, and <strong>project support</strong>.  
+      Most services are <strong>free</strong>, but I also accept <strong>paid commissions</strong> for advanced or custom projects.</p>
+    </div>
   </section>
 
   <section data-aos="zoom-in">
-    <h2>Projects</h2>
-    <div class="project">
+    <h2>Project</h2>
+    <div class="card">
       <h3>Moderation Bot (Open Source)</h3>
-      <p>A powerful and customizable moderation bot for Discord servers.  
-      <strong>Release Date:</strong> 10/21/2025</p>
+      <p>A customizable, powerful moderation bot for Discord servers.  
+      <br><strong>Release Date:</strong> October 21, 2025</p>
     </div>
   </section>
 
   <section data-aos="fade-up">
     <h2>Contact</h2>
-    <p>Email: <a href="mailto:rhonodfletcher32@gmail.com">rhonodfletcher32@gmail.com</a><br>
-    Discord: idkkk08714p</p>
+    <div class="contact">
+      <a href="mailto:rhonodfletcher32@gmail.com">Email Me</a>
+      <a href="#">Discord: idkkk08714p</a>
+    </div>
   </section>
 
   <footer>
     <p>© 2025 Ace | <a href="https://github.com/2k937" target="_blank">GitHub</a></p>
   </footer>
 
-  <!-- AOS Script -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
-    AOS.init({
-      duration: 1000,
-      once: true
-    });
+    AOS.init({ duration: 1000, once: true });
+  </script>
+</body>
+</html>
+
   </script>
 </body>
 </html>
